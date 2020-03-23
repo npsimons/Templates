@@ -1,0 +1,47 @@
+* TL;DR
+
+"Templates" or a series of simple programs for quick prototyping,
+learning, language comparison/research, etc.
+
+* Motivation
+
+These started out as my research into how many programming languages I
+could get installed in Debian GNU/Linux and write the hello world
+program in.
+
+Later, after I discovered the binfmtc[1] package, I wanted to see how
+many different languages I could "script", so I made as many as the
+programs executable out of the box.
+
+Next, I wanted to learn ways to make my code better - warnings I
+could enable, checks that were builtin, etc. So I added those sorts of
+checks where I could.
+
+Eventually I decided that "Hello, World!" was too simple and almost
+useless; I wanted something a bit more, something that would show me
+how to get "real" work done (accessing arguments, etc), plus even more
+test practices such as automated tests (using builtin test utilities if
+possible).
+
+The result is something I can use to rapidly prototype things in a
+handful of languages (some of which weren't even initially designed for
+such), and play with things, extending and testing as I went along.
+
+* Goals
+
+Each program should:
+
+- Demonstrate "Hello, World!" functionality at an absolute bare minimum.
+- Compile/link/run without warnings (with maximum error and warning
+  checking).
+- Be usuable for rapid prototyping (that is, immediately
+  runnable/compilable).
+- Have integrated tests.
+- Be well designed enough to be run on it's own (including tests) and
+  integratable to a larger project (including tests) with a minimum of
+  fuss.
+- Implement the Trabb Pardo-Knuth algorithm for even more demonstration
+  and comparison.
+
+* References
+

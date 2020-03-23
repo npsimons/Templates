@@ -1,0 +1,131 @@
+# Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Standard Makefile.in template.
+
+SHELL = /bin/sh
+.SUFFIXES:
+.SUFFIXES: .c .o
+
+# All compilation lines should look like this. -Nathan
+foo.o : bar.c
+$(CC) -I. -I$(srcdir) $(CFLAGS) -c $< -o $@
+
+# Try to avoid using any utilities directly except for the following:
+# cat cmp cp diff echo egrep expr false grep install-info ln ls mkdir mv pwd
+# rm rmdir sed sleep sort tar test touch true
+
+# Use these variables always instead of directly calling these programs so
+# that autoconf and the end user can make substitutions.
+AR = ar
+BISON = bison
+
+CC = cc
+CFLAGS =
+CPPFLAGS =
+
+FLEX = flex
+INSTALL = install
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = $(INSTALL)
+
+LD = ld
+LDFLAGS =
+LDCONFIG = ldconfig
+
+LEX = lex
+MAKE = make
+MAKEINFO = makeinfo
+RANLIB = ranlib
+TEXI2DVI = texi2dvi
+YACC = yacc
+
+$(INSTALL_PROGRAM) foo $(bindir)/foo
+$(INSTALL_DATA) libfoo.a $(libdir)/libfoo.a
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+lispdir = @lispdir@
+includedir = @includedir@
+oldincludedir = @oldincludedir@
+mandir = @mandir@
+man1dir = $(mandir)/man1
+man2dir = $(mandir)/man2
+man3dir = $(mandir)/man3
+man4dir = $(mandir)/man4
+man5dir = $(mandir)/man5
+man6dir = $(mandir)/man6
+man7dir = $(mandir)/man7
+man8dir = $(mandir)/man8
+man9dir = $(mandir)/man9
+man1ext = .1
+man2ext = .2
+man3ext = .3
+man4ext = .4
+man5ext = .5
+man6ext = .6
+man7ext = .7
+man8ext = .8
+man9ext = .9
+srcdir = @srcdir@
+
+all:
+
+install: all installdirs
+$(PRE_INSTALL)		# Pre-install commands follow
+$(POST_INSTALL)		# Post-install commands follow
+$(NORMAL_INSTALL)	# Normal commands follow
+
+install-strip:
+$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
+
+uninstall:
+$(PRE_UNINSTALL)	# Pre-uninstall commands follow
+$(POST_UNINSTALL)	# Post-uninstall commands follow
+$(NORMAL_UNINSTALL)	# Normal commands follow
+
+clean:
+
+distclean: clean
+
+maintainer-clean: distclean
+@echo 'This command is intended for maintainers to use; it deletes'
+@echo 'files that may require special tools to rebuild.'
+
+TAGS:
+
+dist:
+
+check: all
+
+installcheck:
+
+installdirs: mkinstalldirs
+$(srcdir)/mkinstalldirs $(bindir) $(datadir) $(libdir) $(infodir) \
+$(mandir)
+
+# Local Variables:
+#   mode: makefile
+# End:
+# vi: fileformat=unix expandtab
