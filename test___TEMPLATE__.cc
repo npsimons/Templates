@@ -1,7 +1,7 @@
 /*BINFMTCXX: -DSTANDALONE
  */
 
-// Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+// Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -19,7 +19,8 @@
 // For __Template__.
 // #include "__Template__.hh"
 
-// For Templated Unit Tests.
+// For Templated Unit Tests; requires libtut
+// (https://mrzechonek.github.io/tut-framework/).
 #include <tut.h>
 
 namespace tut
@@ -74,10 +75,10 @@ int main(int argc,
          char* argv[])
 {
   if (argc < 1 ||
-      argv[0] == 0)
+      argv[0] == nullptr)
     {
       throw std::runtime_error("arguments error");
-    }  // if (argc < 1 || argv[0] == 0)
+    }  // if (argc < 1 || argv[0] == nullptr)
 
   tut::reporter reporter;
   tut::runner.get().set_callback(&reporter);
@@ -90,7 +91,7 @@ int main(int argc,
     {
       // try
       std::cerr << "tut raised ex: " << ex.what() << std::endl;
-      return 1;
+      return EXIT_FAILURE;
     }  // catch(const std::exception& ex)  // try
 
   return EXIT_SUCCESS;

@@ -1,7 +1,7 @@
 /*BINFMTCXX: -DSTANDALONE
  */
 
-// Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+// Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -74,7 +74,7 @@ int main(int argc,
   catch(const std::exception& ex)  // try
     {
       std::cerr << "Exception raised: " << ex.what() << std::endl;
-      return 1;
+      return EXIT_FAILURE;
     }
 
   return EXIT_SUCCESS;

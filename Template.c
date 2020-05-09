@@ -1,7 +1,7 @@
 /*BINFMTC: -DSTANDALONE
  */
 
-/* Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+/* Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -38,8 +38,6 @@ int TrabbPardoKnuth(void)
       perror("fputs()");
       goto TrabbPardoKnuth_cleanup;
     }
-
-
   
 TrabbPardoKnuth_cleanup:
   return retval;
@@ -61,19 +59,19 @@ main(int argc,
      char *argv[])
 {
   int retval = EXIT_SUCCESS;
-  int ii = 0;
+  int index = 0;
 
   if (argc < 1 ||
-      argv[0] == NULL)
+      argv[index] == NULL)
     {
       retval = EXIT_FAILURE;
       perror("arguments error");
       goto main_cleanup;
     }
 
-  for (ii = 0; ii < argc; ii++)
+  for (index = 0; index < argc; index++)
     {
-      if (fprintf(stdout, "%s\n", argv[ii]) <= 0)
+      if (fprintf(stdout, "%s\n", argv[index]) <= 0)
         {
           retval = EXIT_FAILURE;
           perror("fprintf()");

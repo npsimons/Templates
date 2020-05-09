@@ -1,6 +1,6 @@
 c BINFMTF:
 
-C     Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+C     Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 C     
 C     This program is free software: you can redistribute it and/or modify
 C     it under the terms of the GNU General Public License as published by

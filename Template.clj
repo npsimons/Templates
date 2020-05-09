@@ -1,4 +1,3 @@
-":";exec guile --debug -s $0 "$@"
 ;; Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 ;;
 ;; This program is free software: you can redistribute it and/or modify
@@ -14,11 +13,9 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(begin
-  (display "Hello, World!")
-  (newline))
+(println "Hello world!")
 
 ;; Local Variables:
-;;   mode: Scheme
+;;   mode: Clojure
 ;; End:
 ;; vi: fileformat=unix expandtab

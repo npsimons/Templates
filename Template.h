@@ -1,7 +1,7 @@
 /*BINFMTC: -DSTANDALONE___TEMPLATE__
  */
 
-/* Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+/* Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -58,17 +58,17 @@ extern "C"
   main(int argc,
        char* argv[])
   {
-    int ii = 0;
+    int index = 0;
 
     if (argc < 1 ||
-        argv[0] == NULL)
+        argv[index] == NULL)
       {
         main_error("arguments error");
       }
 
-    for (ii = 0; ii < argc; ii++)
+    for (index = 0; index < argc; index++)
       {
-        if (fprintf(stdout, "%s\n", argv[ii]) <= 0)
+        if (fprintf(stdout, "%s\n", argv[index]) <= 0)
           {
             main_error("fprintf()");
           }
@@ -82,7 +82,7 @@ extern "C"
     /* Do some stuff here to test this header. */
 
     main_cleanup();
-    return 0;
+    return EXIT_SUCCESS;
   }
 #  endif  /* #  ifdef STANDALONE___TEMPLATE__ */
 

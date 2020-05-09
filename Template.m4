@@ -1,5 +1,5 @@
 #! /usr/bin/env m4
-dnl Copyright (C) 2014 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+dnl Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 
 dnl This program is free software: you can redistribute it and/or modify
 dnl it under the terms of the GNU General Public License as published by
