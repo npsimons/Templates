@@ -47,6 +47,16 @@ if test ${BASH_VERSION:-set} != set; then
     set -o pipefail
 fi
 
+echo $0
+if [ $# -gt 0 ] ; then
+    # If arguments are present, process them
+    while [ $# -gt 0 ] ; do
+        # Do something!
+        echo $1
+        shift
+    done
+fi
+
 MESSAGE="Hello, world!"
 echo $MESSAGE
 
