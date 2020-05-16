@@ -47,18 +47,46 @@ if test ${BASH_VERSION:-set} != set; then
     set -o pipefail
 fi
 
-echo $0
-if [ $# -gt 0 ] ; then
-    # If arguments are present, process them
-    while [ $# -gt 0 ] ; do
-        # Do something!
-        echo $1
-        shift
-    done
+show_help()
+{
+    echo "$0: A template shell script for quick prototyping and testing."
+    echo "  -h, -?, --help   Print this help message."
+    echo "  -v, --verbose    Be verbose."
+}
+
+if test $# -eq 0; then
+   show_help
+
+   MESSAGE="Hello, world!"
+   echo $MESSAGE
+   exit 0
 fi
 
-MESSAGE="Hello, world!"
-echo $MESSAGE
+optspec=":hv-:"
+while getopts "${optspec}" optchar; do
+    case "${optchar}" in
+        -)
+            case "${OPTARG}" in
+                help)
+                    show_help
+                    exit 0
+                    ;;
+                verbose)
+                    verbose=1
+                    ;;
+            esac;;
+        h|\?)
+            show_help
+            exit 0
+            ;;
+        v)
+            verbose=1
+            ;;
+        f)
+            output_file=$OPTARG
+            ;;
+    esac
+done
 
 # Local Variables:
 #   mode: Shell-Script
