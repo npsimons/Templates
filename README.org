@@ -7,9 +7,9 @@
 
   These started out as my research into how many programming languages I
   could get installed in Debian GNU/Linux and write the hello world
-  program in.
+  program[fn:1] in.
 
-  Later, after I discovered the binfmtc[fn:1] package, I wanted to see how
+  Later, after I discovered the binfmtc[fn:2] package, I wanted to see how
   many different languages I could "script", so I made as many as the
   programs executable out of the box.
 
@@ -43,7 +43,7 @@
   - Be well designed enough to be run on it's own (including tests) and
     integratable to a larger project (including tests) with a minimum of
     fuss.
-  - Implement the Trabb Pardo-Knuth algorithm for even more
+  - Implement the Trabb Pardo-Knuth algorithm[fn:3] for even more
     demonstration and comparison.
   - Show good practice usage of other commonly used features such as:
     - Process commandline arguments.
@@ -59,7 +59,37 @@
     available, and fail gracefully if that option can't be used.
   - Check and handle all errors.
 
+* Extranea
+
+  While not having identical goals, the Rosetta Code project[fn:4] is
+  similarly edifying and interesting.
+
+  Steve Yegge has some insights on language comparisons[fn:5] that are
+  cogent, I believe.
+
+  Similarly, Paul Graham believes that you should use Lisp[fn:6] because
+  it will help you "win"[fn:7] partly because it is succinct and has
+  more expressive power[fn:8].
+
+  That being said, there might be reasons Lisp is not more popular[fn:9]
+
 * Footnotes
 
-[fn:1]  http://www.netfort.gr.jp/~dancer/software/binfmtc.html.en
+[fn:1] https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
+
+[fn:2] http://www.netfort.gr.jp/~dancer/software/binfmtc.html.en
+
+[fn:3] https://en.wikipedia.org/wiki/Trabb_Pardo-Knuth_algorithm
+
+[fn:4] https://rosettacode.org/wiki/Rosetta_Code
+
+[fn:5] https://sites.google.com/site/steveyegge2/tour-de-babel
+
+[fn:6] http://www.paulgraham.com/icad.html
+
+[fn:7] http://www.paulgraham.com/avg.html
+
+[fn:8] http://www.paulgraham.com/power.html
+
+[fn:9] http://www.winestockwebdesign.com/Essays/Lisp_Curse.html
 
