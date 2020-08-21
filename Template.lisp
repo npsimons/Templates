@@ -1,4 +1,5 @@
 #! /usr/bin/env clisp
+;;#! /usr/bin/sbcl --script
 ;; Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 ;;
 ;; This program is free software: you can redistribute it and/or modify
@@ -31,9 +32,11 @@
 (if (< 0 (length *args*))
     (format t "~&~S~&" *args*))
 
-;;(write-line "Hello, world!")
-(defvar *msg* "Hello, world!")
-(format t "~a" *msg*)
+(defun say-hello (to)
+  (format nil "Hello, ~a" to))
+
+(defvar msg "world")
+(format t "~a" (say-hello msg))
 
 ;; Local Variables:
 ;;   mode: Lisp

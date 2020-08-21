@@ -1,5 +1,6 @@
-#! /usr/bin/python -tt3
-# Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+#! /usr/bin/python3 -tt
+# -*- coding: utf-8 -*-
+# COPYRIGHT (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,53 +18,44 @@
 """Simple template."""
 
 # Turn on all warnings.
-#pylint: disable=no-name-in-module
 import warnings
 warnings.simplefilter("always")
 
-def HelloWorld():
-    """
-    Canonical introductory/demonstration program.
+def hello_world():
+    """Canonical introductory/demonstration program.
 
-    >>> HelloWorld()
+    >>> hello_world()
     Hello, world!
     """
-    print ("Hello, world!")
+    print("Hello, world!")
 
-def PrintArguments():
-    """
-    Access commandline arguments.
+def print_arguments():
+    """Access commandline arguments.
 
-    >>> PrintArguments()
+    >>> print_arguments()
     ./Template.py
     """
     from sys import argv
     for arg in argv:
-        print arg
+        print(arg)
 
 def __Template___function():
-    """
-    Basic function to print out commandline arguments.
+    """Basic function to print out commandline arguments.
 
     >>> __Template___function()
     Hello, world!
     ./Template.py
     """
-    HelloWorld()
-    PrintArguments()
+    hello_world()
+    print_arguments()
 
 def _test():
-    """
-    Simple default test routine.
-
-    """
+    """Simple default test routine."""
     import doctest
     doctest.testmod(verbose=True)
 
 if __name__ == "__main__":
-    """
-    Main entry if called standalone.
-    """
+    # Main entry if called standalone.
     _test()
 
 # Local Variables:

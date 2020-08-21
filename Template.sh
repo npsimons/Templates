@@ -59,10 +59,9 @@ if test $# -eq 0; then
 
    MESSAGE="Hello, world!"
    echo $MESSAGE
-   exit 0
 fi
 
-optspec=":hv-:"
+optspec="hf:v-:"
 while getopts "${optspec}" optchar; do
     case "${optchar}" in
         -)
@@ -74,6 +73,11 @@ while getopts "${optspec}" optchar; do
                 verbose)
                     verbose=1
                     ;;
+                *)
+                    echo "Unrecognized option --${OPTARG}."
+                    show_help
+                    exit 1
+                    ;;
             esac;;
         h|\?)
             show_help
@@ -84,6 +88,11 @@ while getopts "${optspec}" optchar; do
             ;;
         f)
             output_file=$OPTARG
+            ;;
+        ?)
+            echo "Unrecognized option -${optchar}."
+            show_help
+            exit 1
             ;;
     esac
 done
