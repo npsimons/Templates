@@ -19,7 +19,9 @@
 
 # Turn on all warnings.
 import warnings
+
 warnings.simplefilter("always")
+
 
 def hello_world():
     """Canonical introductory/demonstration program.
@@ -29,6 +31,7 @@ def hello_world():
     """
     print("Hello, world!")
 
+
 def print_arguments():
     """Access commandline arguments.
 
@@ -36,8 +39,10 @@ def print_arguments():
     ./Template.py
     """
     from sys import argv
+
     for arg in argv:
         print(arg)
+
 
 def __Template___function():
     """Basic function to print out commandline arguments.
@@ -49,10 +54,13 @@ def __Template___function():
     hello_world()
     print_arguments()
 
+
 def _test():
     """Simple default test routine."""
     import doctest
+
     doctest.testmod(verbose=True)
+
 
 if __name__ == "__main__":
     # Main entry if called standalone.
