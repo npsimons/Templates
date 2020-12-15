@@ -44,10 +44,10 @@ def print_arguments():
         print(arg)
 
 
-def __Template___function():
+def __template___function():
     """Basic function to print out commandline arguments.
 
-    >>> __Template___function()
+    >>> __template___function()
     Hello, world!
     ./Template.py
     """
