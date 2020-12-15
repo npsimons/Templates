@@ -36,7 +36,7 @@ def print_arguments():
     """Access commandline arguments.
 
     >>> print_arguments()
-    ./Template.py
+    ./template.py
     """
     from sys import argv
 
@@ -49,7 +49,7 @@ def __template___function():
 
     >>> __template___function()
     Hello, world!
-    ./Template.py
+    ./template.py
     """
     hello_world()
     print_arguments()
