@@ -77,7 +77,7 @@
 
 [fn:1] https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
 
-[fn:2] http://www.netfort.gr.jp/~dancer/software/binfmtc.html.en
+[fn:2] https://www.netfort.gr.jp/~dancer/software/binfmtc.html.en
 
 [fn:3] https://en.wikipedia.org/wiki/Trabb_Pardo-Knuth_algorithm
 
@@ -85,11 +85,11 @@
 
 [fn:5] https://sites.google.com/site/steveyegge2/tour-de-babel
 
-[fn:6] http://www.paulgraham.com/icad.html
+[fn:6] https://www.paulgraham.com/icad.html
 
-[fn:7] http://www.paulgraham.com/avg.html
+[fn:7] https://www.paulgraham.com/avg.html
 
-[fn:8] http://www.paulgraham.com/power.html
+[fn:8] https://www.paulgraham.com/power.html
 
-[fn:9] http://www.winestockwebdesign.com/Essays/Lisp_Curse.html
+[fn:9] https://www.winestockwebdesign.com/Essays/Lisp_Curse.html
 

@@ -1,5 +1,5 @@
 #! /usr/bin/env sh
-# Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+# Copyright (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 # General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Run a multitude of tests on software, both source code and binaries,
 # static and dynamic checking. Tools used (if available):
@@ -123,7 +123,7 @@ python_extensions="py"
 # Run static analyses.
 
 # If available, run checkstyle on source code.
-# http://checkstyle.sourceforge.net/
+# https://checkstyle.sourceforge.net/
 run_checkstyle() {
     if [ ! -z `command -v checkstyle` ] ; then
         echo
@@ -139,7 +139,7 @@ run_checkstyle() {
 }
 
 # If available, run cppcheck on source code.
-# http://cppcheck.sourceforge.net/
+# https://cppcheck.sourceforge.net/
 run_cppcheck() {
     if [ ! -z `command -v cppcheck` ] ; then
         echo
@@ -154,7 +154,7 @@ run_cppcheck() {
 }
 
 # If available, run cpplint.py (from Google) on source code.
-# http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py
+# https://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py
 run_cpplint() {
     if [ ! -z `command -v cpplint.py` ] ; then
         echo
@@ -178,7 +178,7 @@ run_cpplint() {
 }
 
 # If available, run flawfinder on source code.
-# http://www.dwheeler.com/flawfinder/
+# https://www.dwheeler.com/flawfinder/
 run_flawfinder() {
     if [ ! -z `command -v flawfinder` ] ; then
         echo
@@ -195,7 +195,7 @@ run_flawfinder() {
 }
 
 # If available, run ftnchek on source code.
-# http://www.dsm.fordham.edu/~ftnchek/
+# https://www.dsm.fordham.edu/~ftnchek/
 run_ftnchek() {
     if [ ! -z `command -v ftnchek` ] ; then
         echo
@@ -228,7 +228,7 @@ run_ftnchek() {
 }
 
 # If available, run hlint on source code.
-# http://community.haskell.org/~ndm/hlint/
+# https://community.haskell.org/~ndm/hlint/
 run_hlint() {
     if [ ! -z `command -v hlint` ] ; then
         echo
@@ -251,7 +251,7 @@ run_hlint() {
 }
 
 # If available, run jlint on source code.
-# http://jlint.sourceforge.net/
+# https://jlint.sourceforge.net/
 run_jlint() {
     if [ ! -z `command -v jlint` ] ; then
         echo
@@ -276,7 +276,7 @@ run_jlint() {
 }
 
 # If available, run perlcritic on source code.
-# http://search.cpan.org/dist/Perl-Critic/bin/perlcritic
+# https://search.cpan.org/dist/Perl-Critic/bin/perlcritic
 run_perlcritic() {
     if [ ! -z `command -v perlcritic` ] ; then
         echo
@@ -307,7 +307,7 @@ run_perlcritic() {
 }
 
 # If available, run pmccabe on source code.
-# http://www.parisc-linux.org/~bame/pmccabe/overview.html
+# https://www.parisc-linux.org/~bame/pmccabe/overview.html
 run_pmccabe() {
     if [ ! -z `command -v pmccabe` ] ; then
         echo
@@ -327,7 +327,7 @@ run_pmccabe() {
 }
 
 # If available, run pscan on source code.
-# http://deployingradius.com/pscan/
+# https://deployingradius.com/pscan/
 run_pscan() {
     if [ ! -z `command -v pscan` ] ; then
         echo
@@ -352,7 +352,7 @@ run_pscan() {
 }
 
 # If available, run pychecker on source code.
-# http://pychecker.sourceforge.net/
+# https://pychecker.sourceforge.net/
 run_pychecker() {
     if [ ! -z `command -v pychecker` ] ; then
         echo
@@ -393,7 +393,7 @@ run_pychecker() {
 }
 
 # If available, run pyflakes on source code.
-# http://pypi.python.org/pypi/pyflakes
+# https://pypi.python.org/pypi/pyflakes
 run_pyflakes() {
     if [ ! -z `command -v pyflakes` ] ; then
         echo
@@ -407,7 +407,7 @@ run_pyflakes() {
 }
 
 # If available, run pylint on source code.
-# http://www.logilab.org/857
+# https://www.logilab.org/857
 run_pylint() {
     if [ ! -z `command -v pylint` ] ; then
         echo
@@ -447,7 +447,7 @@ run_rats() {
 }
 
 # If available, run SLOCCOUNT on source code.
-# http://www.dwheeler.com/sloccount/
+# https://www.dwheeler.com/sloccount/
 run_sloccount() {
     if [ ! -z `command -v sloccount` ] ; then
         echo
@@ -461,7 +461,7 @@ run_sloccount() {
 }
 
 # If available, run splint on source code.
-# http://www.splint.org/
+# https://www.splint.org/
 # splint doesn't work on C++; this wouldn't normally be a problem,
 # except that some people think it's okay to use .h for a C++ header
 # file extension.  How can you tell on the command line that a header is
@@ -489,7 +489,7 @@ run_splint() {
 }
 
 # Run dynamic analyses; assumptions:
-#  1. You are using SCons to build (http://scons.org/).
+#  1. You are using SCons to build (https://scons.org/).
 #  2. Your build binary is named "run_tests" with an optional suffix for
 #     differently compiled versions (such as "_stackpro").
 #  3. You have as many warnings as possible turned on in your build
@@ -498,7 +498,7 @@ run_splint() {
 #     debug options (such as malloc debuggers).
 
 # GCC can compile programs with stack protecting code.
-# http://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Optimize-Options.html#index-fstack_002dprotector_002dall-797
+# https://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Optimize-Options.html#index-fstack_002dprotector_002dall-797
 run_stackpro() {
     echo
     echo "    **** -fstack-protector-all ****    "
@@ -509,7 +509,7 @@ run_stackpro() {
 
 # GCC can compile programs with some other bug detection builtin, and it
 # works with optimizations, so we test it at every level.
-# http://fedoraproject.org/wiki/Security/Features#Compile_Time_Buffer_Checks_.28FORTIFY_SOURCE.29
+# https://fedoraproject.org/wiki/Security/Features#Compile_Time_Buffer_Checks_.28FORTIFY_SOURCE.29
 run_fortsrc() {
     echo
     echo "    **** -D_FORTIFY_SOURCE=2 -O1 ****    "
@@ -531,7 +531,7 @@ run_fortsrc() {
 }
 
 # Check tests binary with abicheck.
-# http://abicheck.sourceforge.net/
+# https://abicheck.sourceforge.net/
 run_abicheck() {
     if [ ! -z `command -v abicheck` ] ; then
         echo
@@ -547,7 +547,7 @@ run_abicheck() {
 }
 
 # Check tests binary with bfbtester.
-# http://bfbtester.sourceforge.net/
+# https://bfbtester.sourceforge.net/
 run_bfbtester() {
     if [ ! -z `command -v bfbtester` ] ; then
         echo
@@ -565,7 +565,7 @@ run_bfbtester() {
 }
 
 # ccmalloc is a malloc debugger.
-# http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/
+# https://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/
 run_ccmalloc() {
     echo
     echo "    **** ccmalloc ****    "
@@ -575,7 +575,7 @@ run_ccmalloc() {
 }
 
 # dmalloc is a malloc debugger.
-# http://dmalloc.com/
+# https://dmalloc.com/
 run_dmalloc() {
     echo
     echo "    **** dmalloc ****    "
@@ -586,7 +586,7 @@ run_dmalloc() {
 }
 
 # DUMA is a malloc debugger.
-# http://duma.sourceforge.net/
+# https://duma.sourceforge.net/
 run_duma() {
     echo
     echo "    **** -lduma ****    "
@@ -605,8 +605,8 @@ run_duma() {
 }
 
 # Electric Fence is a malloc debugger.
-# http://linux.die.net/man/3/efence
-# http://en.wikipedia.org/wiki/Electric_Fence
+# https://linux.die.net/man/3/efence
+# https://en.wikipedia.org/wiki/Electric_Fence
 run_efence() {
     echo
     echo "    **** -lefence ****    "
@@ -625,7 +625,7 @@ run_efence() {
 }
 
 # Check tests binary with fuzz.
-# http://freecode.com/projects/fuzz
+# https://freecode.com/projects/fuzz
 run_fuzz() {
     if [ ! -z `command -v fuzz` ] ; then
         echo
@@ -642,7 +642,7 @@ run_fuzz() {
 }
 
 # Check tests binary with leak-tracer.
-# http://www.andreasen.org/LeakTracer/
+# https://www.andreasen.org/LeakTracer/
 run_leaktracer() {
     if [ ! -z `command -v leak-analyze` ] ; then
         echo
@@ -659,7 +659,7 @@ run_leaktracer() {
 }
 
 # Check tests binary with valgrind tools.
-# http://valgrind.org/
+# https://valgrind.org/
 run_cachegrind() {
     if [ ! -z `command -v valgrind` ] ; then
         echo
@@ -759,8 +759,8 @@ run_memcheck() {
 
 # libc supports memory checking via the MALLOC_CHECK_ environment
 # variable.
-# http://www.novell.com/support/viewContent.do?externalId=3113982&sliceId=1
-# http://linux.die.net/man/3/malloc
+# https://www.novell.com/support/viewContent.do?externalId=3113982&sliceId=1
+# https://linux.die.net/man/3/malloc
 run_malloc_check() {
     echo
     echo "    **** MALLOC_CHECK_=3 ****    "

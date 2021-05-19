@@ -1,5 +1,5 @@
 #! /usr/bin/env sh
-# Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+# Copyright (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Debugging/error checking options; see the bash manual page for details.
 
@@ -43,12 +43,35 @@ set -o noclobber
 set -o nounset
 
 # Fail if any command in a pipeline fails; non-POSIX shell extension.
-if test ${BASH_VERSION:-set} != set; then
+if test "${BASH_VERSION:-set}" != set; then
     set -o pipefail
 fi
+    
+automake \
+    --warnings=all \
+    --gnits \
+    --add-missing
+
+autoconf \
+    --warnings=all
+
+./configure
+
+autoreconf \
+    --install \
+    --symlink \
+    --warnings=all
 
 scons debug=1
 
+cmake \
+    -Werror=dev \
+    -Werror=deprecated \
+    --warn-uninitialized \
+    --warn-unused-vars
+
+make
+    
 # Local Variables:
 #   mode: Shell-Script
 #   sh-indentation: 4

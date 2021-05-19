@@ -1,6 +1,6 @@
-#! /usr/bin/env clisp
-;;#! /usr/bin/sbcl --script
-;; Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+#! /usr/bin/sbcl --script
+;; #! /usr/bin/env clisp
+;; Copyright (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -13,7 +13,7 @@
 ;; General Public License for more details.
 ;;
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;; To compile to a standalone executable:
 ;;   1) Start clisp.
@@ -29,16 +29,54 @@
 ;;                  :executable t
 ;;                  :norc t)
 
-(if (< 0 (length *args*))
-    (format t "~&~S~&" *args*))
+;; To compile with SBCL:
+;; (sb-ext:save-lisp-and-die "executable.exe"
+;;                           :toplevel 'main
+;;                           :executable t)
+
+;; Also see "Compile your program using:" in
+;; /usr/share/doc/sbcl/README.Debian
+;; (compile-file "file1.lisp")
+;; (compile-file "file2.lisp")
+
+(defun my-getenv (name &optional default)
+  #+CMU
+  (let ((x (assoc name ext:*environment-list*
+                  :test #'string=)))
+    (if x (cdr x) default))
+  #-CMU
+  (or
+   #+Allegro (sys:getenv name)
+   #+CLISP (ext:getenv name)
+   #+ECL (si:getenv name)
+   #+LISPWORKS (lispworks:environment-variable name)
+   #+SBCL (sb-unix::posix-getenv name)
+   default))
+
+(defun my-command-line ()
+  (or 
+   #+CLISP *args*
+   #+CMU extensions:*command-line-words*
+   #+LISPWORKS system:*line-arguments-list*
+   #+SBCL *posix-argv*  
+   nil))
+
+(defun print-arguments (arguments)
+  (if (< 0 (length arguments))
+      (format t "~&~S~&" arguments)))
 
 (defun say-hello (to)
   (format nil "Hello, ~a" to))
 
-(defvar msg "world")
-(format t "~a" (say-hello msg))
+(defun main ()
+  (let ((msg "world"))
+    (print-arguments (my-command-line))
+    (format t "~a" (say-hello msg))))
 
-;; Local Variables:
+(main)
+
+;; Local variables:
+;;   coding: utf-8
 ;;   mode: Lisp
 ;; End:
-;; vi: fileformat=unix expandtab
+;; vi: fileformat=unix fileencoding=utf-8 filetype=lisp expandtab :

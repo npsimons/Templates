@@ -1,5 +1,5 @@
-Taken from http://creativecommons.org/licenses/by-sa/3.0/legalcode
-See http://creativecommons.org/licenses/by-sa/3.0/ for the short
+Taken from https://creativecommons.org/licenses/by-sa/3.0/legalcode
+See https://creativecommons.org/licenses/by-sa/3.0/ for the short
 version.
 
 THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
@@ -41,7 +41,7 @@ CONDITIONS.
    License.
 
    c. "Creative Commons Compatible License" means a license that is
-   listed at http://creativecommons.org/compatiblelicenses that has been
+   listed at https://creativecommons.org/compatiblelicenses that has been
    approved by Creative Commons as being essentially equivalent to this
    License, including, at a minimum, because that license: (i) contains
    terms that have the same purpose, meaning and effect as the License

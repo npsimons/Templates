@@ -1,7 +1,7 @@
 /*BINFMTCXX: -DSTANDALONE
  */
 
-// Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+// Copyright (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,9 +14,12 @@
 // General Public License for more details.
 // 
 // You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #if defined STANDALONE
+
+// For boost::type_index.
+#  include <boost/type_index.hpp>
 
 // For copy().
 #  include <algorithm>
@@ -30,8 +33,42 @@
 // For std::runtime_error() and std::exception.
 #  include <stdexcept>
 
-// For EXIT_SUCCESS.
+// For std::map<>.
+#  include <map>
+
+// For EXIT_SUCCESS and EXIT_FAILURE.
 #  include <cstdlib>
+
+void authenticateUser();
+
+template<typename Container,
+         typename Index>
+decltype(auto)
+authAndAccess(Container&& container_,
+              Index index_)
+{
+  authenticateUser();
+  return std::forward<Container>(container_)[index_];
+}
+
+template <typename Type>
+void function(const Type& parameter_)
+{
+  using std::cout;
+  using std::endl;
+  using boost::typeindex::type_id_with_cvr;
+
+  cout << "T =          "
+       << type_id_with_cvr<Type>().pretty_name()
+       << endl;
+  cout << "parameter_ = "
+       << type_id_with_cvr<decltype(parameter_)>().pretty_name()
+       << endl;
+}
+
+class Widget
+{
+};
 
 /** Main entry to program.
  *
@@ -70,6 +107,18 @@ int main(int argc,
            ostream_iterator<char*>(cout, "\n"));
 
       cout << "Hello, world!" << endl;
+      
+      std::map<int, int> m;
+
+      for (const auto &i : { 0, 1, 2, 3, 4 })
+        {
+          m[i] = rand();
+        }
+
+      for (const auto& p : m)
+        {
+          cout << p.second << endl;
+        }
     }
   catch(const std::exception& ex)  // try
     {

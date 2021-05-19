@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Nathan Paul Simons (C2T9uE-code@hardcorehackers.com)
+# Copyright (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -11,11 +11,11 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Turn on as many warnings as possible for gcc; all these flags have
 # been tested with gcc 4.4.5 on Debian 6.0.2. See the gcc manual
-# (http://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Option-Index.html#Option-Index)
+# (https://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Option-Index.html#Option-Index)
 # for details.
 c_warn_flags = '\
 -pedantic \
@@ -94,7 +94,7 @@ bad_c_warn_flags = '\
 
 # Turn on as many warnings as possible for g++; all these flags have
 # been tested with g++ 4.4.5 on Debian 6.0.2. See the gcc manual
-# (http://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Option-Index.html#Option-Index)
+# (https://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Option-Index.html#Option-Index)
 # for details.
 cxx_warn_flags = '\
 -pedantic \
@@ -184,7 +184,7 @@ debug_flags = '\
 
 # This enables stack smashing protection; see the GCC documentation for
 # details.
-# http://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Optimize-Options.html#index-fstack_002dprotector_002dall-797
+# https://gcc.gnu.org/onlinedocs/gcc-4.4.6/gcc/Optimize-Options.html#index-fstack_002dprotector_002dall-797
 stackpro_flags = '\
 -fstack-protector-all \
 -Wstack-protector \
@@ -193,7 +193,7 @@ stackpro_flags = '\
 # This will cause some lightweight checks to be performed that will
 # check for buffer overflows; it is specific to GNU libc 2.3.4 and
 # above.
-# http://fedoraproject.org/wiki/Security/Features#Compile_Time_Buffer_Checks_.28FORTIFY_SOURCE.29
+# https://fedoraproject.org/wiki/Security/Features#Compile_Time_Buffer_Checks_.28FORTIFY_SOURCE.29
 fortify_flags = '\
 -D_FORTIFY_SOURCE=2 \
 '
@@ -207,14 +207,14 @@ fortO2_flags = fortify_flags + optim_warn_flags + '-O2 '
 fortO3_flags = fortify_flags + optim_warn_flags + '-O3 '
 
 # Electric Fence is a malloc debugger.
-# http://linux.die.net/man/3/efence
-# http://en.wikipedia.org/wiki/Electric_Fence
+# https://linux.die.net/man/3/efence
+# https://en.wikipedia.org/wiki/Electric_Fence
 efence_flags = '\
 -lefence \
 '
 
 # ccmalloc is a malloc debugger.
-# http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/
+# https://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/
 ccmalloc_flags = '\
 /usr/lib/ccmalloc-g++.o \
 -lccmalloc \
@@ -222,7 +222,7 @@ ccmalloc_flags = '\
 '
 
 # dmalloc is a malloc debugger.
-# http://dmalloc.com/
+# https://dmalloc.com/
 dmalloc_flags = '\
 -DDMALLOC \
 -DMALLOC_FUNC_CHECK \
@@ -230,7 +230,7 @@ dmalloc_flags = '\
 '
 
 # DUMA is a malloc debugger.
-# http://duma.sourceforge.net/
+# https://duma.sourceforge.net/
 duma_flags = '\
 -lduma \
 '
