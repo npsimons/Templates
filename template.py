@@ -1,6 +1,6 @@
 #! /usr/bin/python3 -tt
 # -*- coding: utf-8 -*-
-# COPYRIGHT (C) 2020 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
+# COPYRIGHT (C) 2021 Nathan Paul Simons (2hmuFQDSHf-code@hardcorehackers.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
