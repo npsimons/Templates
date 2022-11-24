@@ -56,9 +56,7 @@ show_help()
 
 if test $# -eq 0; then
    show_help
-
-   MESSAGE="Hello, world!"
-   echo $MESSAGE
+   exit
 fi
 
 optspec="hf:v-:"
