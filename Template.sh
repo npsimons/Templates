@@ -43,7 +43,7 @@ set -o noclobber
 set -o nounset
 
 # Fail if any command in a pipeline fails; non-POSIX shell extension.
-if test ${BASH_VERSION:-set} != set; then
+if test "${BASH_VERSION:-set}" != set; then
     set -o pipefail
 fi
 
