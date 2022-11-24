@@ -91,5 +91,5 @@
 
 [fn:8] https://www.paulgraham.com/power.html
 
-[fn:9] https://www.winestockwebdesign.com/Essays/Lisp_Curse.html
+[fn:9] http://www.winestockwebdesign.com/Essays/Lisp_Curse.html
 
